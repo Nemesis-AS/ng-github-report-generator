@@ -1,0 +1,29 @@
+<div
+  class="min-h-[100lvh] bg-gradient-to-br from-gray-900 to-gray-800 text-white flex flex-col items-center justify-center px-4">
+  <div class="max-w-2xl w-full text-center space-y-8">
+    <div class="flex w-full justify-center">
+      <mat-icon aria-hidden="false" aria-label="GitHub Icon" svgIcon="github"
+        style="width:6rem;height:6rem;"></mat-icon>
+
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold">GitHub Profile Report</h1>
+    <p class="text-xl text-gray-300">
+      Enter a GitHub username to view their detailed profile report
+    </p>
+  </div>
+
+  <form class="max-w-md w-full mx-auto space-y-4 mt-2" (submit)="viewProfile($event)">
+    <div class="relative w-full">
+      <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+        <mat-icon aria-hidden="false" aria-label="Search Icon" fontIcon="search" style="width:1.25rem;height:1.25rem;"
+          class="text-gray-400"></mat-icon>
+      </div>
+      <input type="text" placeholder="Enter GitHub username"
+        class="block w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent placeholder-gray-500 text-white" [(ngModel)]="username" name="userame" autocomplete="off" />
+    </div>
+    <button type="submit"
+      class="w-full py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200 flex items-center justify-center gap-2">
+      View Profile Report
+    </button>
+  </form>
+</div>

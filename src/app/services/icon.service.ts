@@ -14,7 +14,7 @@ export class IconService {
   }
 
   private registerIcons(): void {
-    const icons = ['git-fork'];
+    const icons = ['git-fork', 'github'];
 
     icons.forEach((icon) => {
       this.iconRegistry.addSvgIcon(
